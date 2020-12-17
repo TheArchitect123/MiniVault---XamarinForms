@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cm:FormsApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cm="clr-namespace:Caliburn.Micro.Xamarin.Forms;assembly=Caliburn.Micro.Platform.Xamarin.Forms"
+             x:Class="Cross.DataVault.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="IndigoBlue">#4b7caa</Color>
+            <Color x:Key="GoldCommunity">#ffbb00</Color>
+            <Color x:Key="SettingsButton">#3f51b5</Color>
+            <Color x:Key="SettingsTitle">#515151</Color>
+            <Color x:Key="SettingsPlaceholder">#b6b6b6</Color>
+            <Color x:Key="CardBackground">#0165a3</Color>
+            <Color x:Key="RequestSection">#1976d3</Color>
+
+            <Color x:Key="MessagesTitle">#979799</Color>
+            <Color x:Key="BlueBar">#27599e</Color>
+
+            <!--Fonts-->
+            <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoThin">
+                <On Platform="Android" Value="Roboto-Thin.ttf#Roboto-Thin" />
+                <On Platform="UWP" Value="/Assets/Roboto-Thin.ttf#Roboto-Thin" />
+                <On Platform="iOS" Value="Roboto-Thin" />
+            </OnPlatform>
+
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoLight">
+                <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                <On Platform="UWP" Value="/Assets/Roboto-Light.ttf#Roboto-Light" />
+                <On Platform="iOS" Value="Roboto-Light" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoRegular">
+                <On Platform="Android" Value="Roboto-Regular.ttf#Roboto-Regular" />
+                <On Platform="UWP" Value="/Assets/Roboto-Regular.ttf#Roboto-Regular" />
+                <On Platform="iOS" Value="Roboto-Regular" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="RoboticoBold">
+                <On Platform="Android" Value="Roboto-Bold.ttf#Roboto-Bold" />
+                <On Platform="UWP" Value="/Assets/Roboto-Bold.ttf#Roboto-Bold" />
+                <On Platform="iOS" Value="Roboto-Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</cm:FormsApplication>

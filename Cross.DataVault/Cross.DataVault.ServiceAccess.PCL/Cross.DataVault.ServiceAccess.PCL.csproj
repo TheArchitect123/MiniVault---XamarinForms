@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D9BB6F0-1271-41F9-97E8-327855CBE3A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Cross.DataVault.ServiceAccess.PCL</RootNamespace>
+    <AssemblyName>Cross.DataVault.ServiceAccess.PCL</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="app.config" />
+    <None Include="Connected Services\AccountManagerService\AccountManagement.wsdl" />
+    <None Include="Connected Services\AccountManagerService\AccountManagement.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AccountManagerService\AccountManagement1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AccountManagerService\AccountManagement2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AccountManagerService\AccountManagement3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AccountManagerService\Cross.DataVault.ServiceAccess.PCL.AccountManagerService.IdentityPacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.AccountResponsePacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.ContactsResponsePacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.IdentityPacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.MusicResponsePacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.NotesResponsePacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.PasswordsResponsePacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\Cross.DataVault.ServiceAccess.PCL.DataVaultCloudService.PhotosResponsePacket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF.wsdl" />
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Connected Services\AccountManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\DataVaultCloudService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DataVaultAccountServiceClient.cs" />
+    <Compile Include="DataVaultWebServiceClient.cs" />
+    <Compile Include="Mapping\LocalMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AccountManagerService\" />
+    <WCFMetadataStorage Include="Connected Services\DataVaultCloudService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountManagerService\AccountManagement.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AccountManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DataVaultCloudService\DataVaultService_WCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DataVaultCloudService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DataVaultCloudService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DataVaultCloudService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Plugin.Connectivity, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.2.0\lib\netstandard1.0\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.2.0\lib\netstandard1.0\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>

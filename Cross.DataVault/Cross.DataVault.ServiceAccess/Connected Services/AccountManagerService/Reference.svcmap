@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bad02f88-2878-435d-98f1-f8733363aa6b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AccountManagement.xsd" MetadataType="Schema" ID="faa752f0-194a-450c-b73a-a59920bf77ab" SourceId="1" SourceUrl="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc?xsd=xsd3" />
+    <MetadataFile FileName="AccountManagement1.xsd" MetadataType="Schema" ID="f8b05f84-1a61-437c-8700-5331d7274902" SourceId="1" SourceUrl="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc?xsd=xsd0" />
+    <MetadataFile FileName="AccountManagement2.xsd" MetadataType="Schema" ID="e0b84d59-20d3-47ce-812a-648fde3d8f6b" SourceId="1" SourceUrl="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc?xsd=xsd1" />
+    <MetadataFile FileName="AccountManagement.wsdl" MetadataType="Wsdl" ID="a6d91a03-19e9-4bf7-b00e-632b97d69c3e" SourceId="1" SourceUrl="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc?wsdl" />
+    <MetadataFile FileName="AccountManagement.disco" MetadataType="Disco" ID="05cf0045-54f9-4f5c-a7c5-1038d07f46a2" SourceId="1" SourceUrl="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc?disco" />
+    <MetadataFile FileName="AccountManagement3.xsd" MetadataType="Schema" ID="813d5198-0445-4937-8415-2b9fc531af5e" SourceId="1" SourceUrl="http://localhost/DataVaultService.AccountManagement/AccountManagement.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

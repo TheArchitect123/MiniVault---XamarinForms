@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" />
+  <xs:complexType name="NotesResponsePacket">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="ResponsePacket" nillable="true" type="q1:IdentityPacket" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Note" nillable="true" type="q2:Notes" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Notes" nillable="true" type="q3:ArrayOfNotes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotesResponsePacket" nillable="true" type="tns:NotesResponsePacket" />
+  <xs:complexType name="PasswordsResponsePacket">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="ResponsePacket" nillable="true" type="q4:IdentityPacket" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Password" nillable="true" type="q5:Passwords" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Passwords" nillable="true" type="q6:ArrayOfPasswords" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PasswordsResponsePacket" nillable="true" type="tns:PasswordsResponsePacket" />
+  <xs:complexType name="AccountResponsePacket">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="ResponsePacket" nillable="true" type="q7:IdentityPacket" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Account" nillable="true" type="q8:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountResponsePacket" nillable="true" type="tns:AccountResponsePacket" />
+  <xs:complexType name="ContactsResponsePacket">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="ResponsePacket" nillable="true" type="q9:IdentityPacket" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Contact" nillable="true" type="q10:Contacts" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Contacts" nillable="true" type="q11:ArrayOfContacts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactsResponsePacket" nillable="true" type="tns:ContactsResponsePacket" />
+  <xs:complexType name="MusicResponsePacket">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="ResponsePacket" nillable="true" type="q12:IdentityPacket" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Music" nillable="true" type="q13:Music" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Musics" nillable="true" type="q14:ArrayOfMusic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MusicResponsePacket" nillable="true" type="tns:MusicResponsePacket" />
+  <xs:complexType name="PhotosResponsePacket">
+    <xs:sequence>
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="ResponsePacket" nillable="true" type="q15:IdentityPacket" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Photo" nillable="true" type="q16:Photos" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" minOccurs="0" name="_Photos" nillable="true" type="q17:ArrayOfPhotos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhotosResponsePacket" nillable="true" type="tns:PhotosResponsePacket" />
+</xs:schema>

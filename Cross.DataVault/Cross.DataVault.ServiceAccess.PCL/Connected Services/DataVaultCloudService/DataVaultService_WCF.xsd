@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Notes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time_OfCreation" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Notes" nillable="true" type="tns:Notes" />
+  <xs:complexType name="IdentityPacket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contact_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Content_ID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errors" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="HasError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Process_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteUser" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IdentityPacket" nillable="true" type="tns:IdentityPacket" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avatar" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Display_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Home" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Work" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfNotes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Notes" nillable="true" type="tns:Notes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotes" nillable="true" type="tns:ArrayOfNotes" />
+  <xs:complexType name="Passwords">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password_Hashed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time_OfCreation" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Passwords" nillable="true" type="tns:Passwords" />
+  <xs:complexType name="ArrayOfPasswords">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Passwords" nillable="true" type="tns:Passwords" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPasswords" nillable="true" type="tns:ArrayOfPasswords" />
+  <xs:complexType name="Contacts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address_ID_Ref" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Avatar" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Contact_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Home" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteUser_DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Work" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contacts" nillable="true" type="tns:Contacts" />
+  <xs:complexType name="ArrayOfContacts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contacts" nillable="true" type="tns:Contacts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContacts" nillable="true" type="tns:ArrayOfContacts" />
+  <xs:complexType name="Music">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Artist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date_OfCreation" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Duration" type="ser:duration" />
+      <xs:element minOccurs="0" name="LengthOfMusic" type="ser:duration" />
+      <xs:element minOccurs="0" name="Music_Content" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Music_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Music_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Music" nillable="true" type="tns:Music" />
+  <xs:complexType name="ArrayOfMusic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Music" nillable="true" type="tns:Music" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMusic" nillable="true" type="tns:ArrayOfMusic" />
+  <xs:complexType name="Photos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Photo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Photo_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Photo_MIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time_OfCreation" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Photos" nillable="true" type="tns:Photos" />
+  <xs:complexType name="ArrayOfPhotos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Photos" nillable="true" type="tns:Photos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhotos" nillable="true" type="tns:ArrayOfPhotos" />
+</xs:schema>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>In order to securely store your contacts in your vault, Mini Vault requires access to your contacts</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>In order to securely store your photos in your vault, Mini Vault requires access to your photos</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>In order to securely store your photos in your vault, Mini Vault requires access to your photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>In order to securely store your photos in your vault, Mini Vault requires access to your camera</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Mini Vault requires access to your calendar to keep track of events for secure storage</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>test</string>
+	<key>NSSiriUsageDescription</key>
+	<string>Testing</string>
+	<key>MinimumOSVersion</key>
+	<string>10.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.alphaGenius.VaultApplication</string>
+	<key>CFBundleVersion</key>
+	<string>1.2.5</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto-Black.ttf</string>
+		<string>Roboto-BlackItalic.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-BoldItalic.ttf</string>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-LightItalic.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-MediumItalic.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Thin.ttf</string>
+		<string>Roboto-ThinItalic.ttf</string>
+		<string>OpenSans-Bold.ttf</string>
+		<string>OpenSans-BoldItalic.ttf</string>
+		<string>OpenSans-ExtraBold.ttf</string>
+		<string>OpenSans-ExtraBoldItalic.ttf</string>
+		<string>OpenSans-Italic.ttf</string>
+		<string>OpenSans-Light.ttf</string>
+		<string>OpenSans-LightItalic.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+		<string>OpenSans-Semibold.ttf</string>
+		<string>OpenSans-SemiboldItalic.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>CFBundleDisplayName</key>
+	<string>Mini Vault</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
+	<key>XSAppIconAssets</key>
+	<string>Media.xcassets/AppIcons.appiconset</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>In order to securely store your audio recordings, Mini Vault requires access to your microphone</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>In order to securely store your music in your vault, Mini Vault requires access to your music library</string>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>In order to securely store your music in your vault, Mini Vault requires access to your music library</string>
+</dict>
+</plist>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Cross.DataVault.RestService.DataVaultService" CodeBehind="DataVaultService.svc.cs" %>

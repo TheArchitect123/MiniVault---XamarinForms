@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cross.DataVault.Controls.TextField"
+             xmlns:Effects="clr-namespace:Cross.DataVault.Effects">
+  <ContentView.Content>
+        <RelativeLayout x:Name="CarrierView" HeightRequest="40" IsClippedToBounds="False">
+            <Label
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"  
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" 
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=20}"
+                x:Name="HintView" TextColor="Blue" Font="12"/>
+
+            <Label
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"  
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=EntryField, Property=Y, Factor=1, Constant=20}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" 
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=20}"
+                
+                x:Name="UnderlineIndicator" Text="____________________________________________________________________________________________________________________________________"
+                   TextColor="Black" VerticalTextAlignment="Start">
+                <Label.Effects>
+                    <Effects:TextFieldEffect/>
+                </Label.Effects>
+            </Label>
+
+            <Label
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"  
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=UnderlineIndicator, Property=Y, Factor=1, Constant=20}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" 
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=20}"
+                 Opacity="1" Font="12"
+                x:Name="ErrorView"
+                   TextColor="Red" VerticalTextAlignment="Start"/>
+
+
+
+            <Entry BackgroundColor="Transparent" IsSpellCheckEnabled="False" 
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=5}"  
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=HintView, Property=Height, Factor=0, Constant=5}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}" 
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}"
+                x:Name="EntryField" Placeholder="Username" IsPassword="False"/>
+
+        </RelativeLayout>
+    </ContentView.Content>
+</ContentView>

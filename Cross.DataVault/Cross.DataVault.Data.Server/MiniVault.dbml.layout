@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15, 16.125" name="MiniVault">
+  <DataContextMoniker Name="/MiniVaultDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c6067534-99f5-4718-80a5-4760f58d2342" absoluteBounds="0.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/MiniVaultDataContext/account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="edf3ecc6-42e6-4729-9efa-37a5e9517ba1" absoluteBounds="0.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2e3b94a-363a-4997-89da-3339dabafbd0" absoluteBounds="3.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MiniVaultDataContext/logs_data" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f002446c-9d56-4a85-8565-a0e447547cc7" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a309959-dfa5-406e-9799-3bef62d8db8c" absoluteBounds="0.75, 8.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08368724-2d7e-405f-937f-8bc6388e628c" absoluteBounds="0.765, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddc087d8-7e5f-4276-b12e-ca07175aeb64" absoluteBounds="9.25, 11, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="964a186c-0581-405a-8c10-48e48f0e5e68" absoluteBounds="9.265, 11.46, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed564614-3099-446f-a322-cb786d745a21" absoluteBounds="3.5, 5.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_Path" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4be022f-4852-4d6b-a209-0548a4463b6a" absoluteBounds="3.515, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f96724c-62e5-40e0-b815-f6afe36ca27a" absoluteBounds="6.25, 5.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_PersonalizationAllUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5d6274e-ca00-4813-809a-616585682143" absoluteBounds="6.265, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c66d8951-66cd-4700-be04-5a30c0b4286e" absoluteBounds="9.25, 8.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_PersonalizationPerUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89d54dba-5d7a-41a1-bddf-fc70f65222cd" absoluteBounds="9.265, 8.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c49e1c1f-37f9-485c-88c2-0dd7a3b0e3a6" absoluteBounds="6.25, 10.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7693589-3ab8-4665-bcda-db88a724d9cd" absoluteBounds="6.265, 11.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b20d20b-2bd7-4a03-b9dc-2b5841d28627" absoluteBounds="3.5, 7.875, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cc961e0-9e50-4aea-9a57-ea9ef0d88a5a" absoluteBounds="3.515, 8.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f89b3ab-2946-4b0e-924f-b79a971fad54" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_SchemaVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c488c92-5020-4a6b-a0d3-6f98c7499435" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab2249dc-2ba3-4122-8d88-075cfa05fcdb" absoluteBounds="3.5, 10.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f9354b3-cbb7-4611-953a-0cf39e3ff6e1" absoluteBounds="3.515, 10.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f032db95-b3e5-418b-9045-517621403e6c" absoluteBounds="6.25, 8.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5f844fe-3bd1-4bf2-8689-22828ef4b35d" absoluteBounds="6.265, 9.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39134b25-dc76-4864-b41c-00ec65cd0333" absoluteBounds="9.75, 0.75, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/MiniVaultDataContext/aspnet_WebEvent_Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1df39012-04c8-485c-b5fe-a5201c69d303" absoluteBounds="9.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="babafc65-ba44-4a85-b238-376744c8c71d" absoluteBounds="11.75, 5.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/MiniVaultDataContext/core_contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="020c2559-6f2b-4780-a904-a7dd37dfd838" absoluteBounds="11.765, 6.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a8e5560-d543-4de8-9ab2-d72c159b60ec" absoluteBounds="11.75, 10.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MiniVaultDataContext/core_music" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2d25137-127c-4a54-8dbf-9735e0386442" absoluteBounds="11.765, 11.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11c79c5e-b16b-4cbb-9c71-6230120e13ee" absoluteBounds="12.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MiniVaultDataContext/core_note" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84b2ae1e-36a6-48e4-98b3-0fa5317040f4" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95e5b69e-e542-41f6-bce9-d804b86cb045" absoluteBounds="0.75, 13.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MiniVaultDataContext/core_password" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8cd8b46-de92-4a22-839f-de9ef4597efd" absoluteBounds="0.765, 14.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b54b104-2fe5-4d62-9bbb-80578705d169" absoluteBounds="3.75, 13.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MiniVaultDataContext/core_photo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d78e4fc-3f07-4d16-95c9-f5b2ce79721c" absoluteBounds="3.765, 14.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 9.82859537760417); (3.125 : 10.2035953776042); (3.125 : 13.1402498372396); (9.25 : 13.1402498372396)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Application/aspnet_Application_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="6a309959-dfa5-406e-9799-3bef62d8db8c" />
+        <classShapeMoniker Id="ddc087d8-7e5f-4276-b12e-ca07175aeb64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.25); (1.75 : 6.28929768880208); (3.5 : 6.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Application/aspnet_Application_aspnet_Path" />
+      <nodes>
+        <classShapeMoniker Id="6a309959-dfa5-406e-9799-3bef62d8db8c" />
+        <classShapeMoniker Id="ed564614-3099-446f-a322-cb786d745a21" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.31814697265625); (6.25 : 6.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationAllUser" />
+      <nodes>
+        <classShapeMoniker Id="ed564614-3099-446f-a322-cb786d745a21" />
+        <classShapeMoniker Id="6f96724c-62e5-40e0-b815-f6afe36ca27a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.53125); (10.25 : 5.53125); (10.25 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="ed564614-3099-446f-a322-cb786d745a21" />
+        <classShapeMoniker Id="c66d8951-66cd-4700-be04-5a30c0b4286e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.94794840494792); (3.5 : 8.94794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Application/aspnet_Application_aspnet_Role" />
+      <nodes>
+        <classShapeMoniker Id="6a309959-dfa5-406e-9799-3bef62d8db8c" />
+        <classShapeMoniker Id="6b20d20b-2bd7-4a03-b9dc-2b5841d28627" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.4944482421875); (9.25 : 12.4944482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="ab2249dc-2ba3-4122-8d88-075cfa05fcdb" />
+        <classShapeMoniker Id="ddc087d8-7e5f-4276-b12e-ca07175aeb64" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.4703836153846); (6.0625 : 9.90788361538462); (6.0625 : 10.2708968098958); (8.875 : 10.2708968098958); (9.25 : 9.89589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_User/aspnet_User_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="ab2249dc-2ba3-4122-8d88-075cfa05fcdb" />
+        <classShapeMoniker Id="c66d8951-66cd-4700-be04-5a30c0b4286e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.5104484049479); (6.25 : 11.5104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_User/aspnet_User_aspnet_Profile" />
+      <nodes>
+        <classShapeMoniker Id="ab2249dc-2ba3-4122-8d88-075cfa05fcdb" />
+        <classShapeMoniker Id="c49e1c1f-37f9-485c-88c2-0dd7a3b0e3a6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.7187475 : 9.82859537760417); (1.7187475 : 11.4527498372396); (3.04166666666667 : 11.4527498372396 : JumpStart); (3.20833333333333 : 11.4527498372396 : JumpEnd); (3.5 : 11.4527498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Application/aspnet_Application_aspnet_User" />
+      <nodes>
+        <classShapeMoniker Id="6a309959-dfa5-406e-9799-3bef62d8db8c" />
+        <classShapeMoniker Id="ab2249dc-2ba3-4122-8d88-075cfa05fcdb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.13544840494792); (6.25 : 9.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_Role/aspnet_Role_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="6b20d20b-2bd7-4a03-b9dc-2b5841d28627" />
+        <classShapeMoniker Id="f032db95-b3e5-418b-9045-517621403e6c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46769230769231 : 10.375); (5.875 : 9.96769230769231); (5.875 : 10.1939925130208); (6.00357443490112 : 10.0654180781197 : JumpStart); (6.12142556509888 : 9.94756694792196 : JumpEnd); (6.25 : 9.81899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MiniVaultDataContext/aspnet_User/aspnet_User_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="ab2249dc-2ba3-4122-8d88-075cfa05fcdb" />
+        <classShapeMoniker Id="f032db95-b3e5-418b-9045-517621403e6c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

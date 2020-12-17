@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DataVaultService.DataVaultService_WCF" CodeBehind="DataVaultService_WCF.svc.cs" %>

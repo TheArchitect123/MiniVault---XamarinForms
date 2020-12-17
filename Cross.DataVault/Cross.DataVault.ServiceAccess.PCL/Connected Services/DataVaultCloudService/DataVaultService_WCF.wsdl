@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataVaultService_WCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IDataVaultService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data" />
+      <xsd:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/DataVaultService/DataVaultService_WCF.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Cross.DataVault.Contracts.Data.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataVaultService_IsServiceAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsServiceAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_IsServiceAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsServiceAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNote" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeleteNote_ByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNote_ByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeleteNote_ByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNote_ByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeleteNotes_ByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNotes_ByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeleteNotes_ByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNotes_ByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetNote_ByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNote_ByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetNote_ByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNote_ByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetNotes_ByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotes_ByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetNotes_ByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotes_ByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetNotes_ByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotes_ByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetNotes_ByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotes_ByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_UpdateNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNote" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_UpdateNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_UpdateNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotes" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_UpdateNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPassword" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeletePassword_ByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePassword_ByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeletePassword_ByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePassword_ByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeletePasswords_ByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePasswords_ByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_DeletePasswords_ByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePasswords_ByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_UpdatePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_UpdatePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetPasswords_ByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswords_ByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetPasswords_ByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswords_ByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetPassword_ByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPassword_ByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetPassword_ByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPassword_ByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetPasswords_ByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswords_ByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_GetPasswords_ByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPasswords_ByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_Account_ViaAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Account_ViaAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_Account_ViaAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Account_ViaAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_ContactByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_ContactByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_ContactByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_ContactByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_ContactsByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_ContactsByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_ContactsByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_ContactsByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_ContactByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ContactByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_ContactByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ContactByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_ContactsByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ContactsByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_ContactsByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ContactsByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_ContactsByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ContactsByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_ContactsByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ContactsByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddMusic_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMusic" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddMusic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMusicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_MusicByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_MusicByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_MusicByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_MusicByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_MusicByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_MusicByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_MusicByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_MusicByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_MusicByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_MusicByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_MusicByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_MusicByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddPhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPhoto" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_AddPhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_PhotoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_PhotoByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_PhotoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_PhotoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_PhotosByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_PhotosByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Delete_PhotosByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_PhotosByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_PhotoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_PhotoByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_PhotoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_PhotoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_PhotoByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_PhotoByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_PhotoByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_PhotoByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_PhotoByIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_PhotoByIDs" />
+  </wsdl:message>
+  <wsdl:message name="IDataVaultService_Get_PhotoByIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_PhotoByIDsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataVaultService">
+    <wsdl:operation name="IsServiceAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/IsServiceAvailable" message="tns:IDataVaultService_IsServiceAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/IsServiceAvailableResponse" message="tns:IDataVaultService_IsServiceAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/AddNote" message="tns:IDataVaultService_AddNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/AddNoteResponse" message="tns:IDataVaultService_AddNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNote_ByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/DeleteNote_ByID" message="tns:IDataVaultService_DeleteNote_ByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/DeleteNote_ByIDResponse" message="tns:IDataVaultService_DeleteNote_ByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNotes_ByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/DeleteNotes_ByIDs" message="tns:IDataVaultService_DeleteNotes_ByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/DeleteNotes_ByIDsResponse" message="tns:IDataVaultService_DeleteNotes_ByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNote_ByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/GetNote_ByID" message="tns:IDataVaultService_GetNote_ByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/GetNote_ByIDResponse" message="tns:IDataVaultService_GetNote_ByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotes_ByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/GetNotes_ByIDs" message="tns:IDataVaultService_GetNotes_ByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/GetNotes_ByIDsResponse" message="tns:IDataVaultService_GetNotes_ByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotes_ByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/GetNotes_ByUserID" message="tns:IDataVaultService_GetNotes_ByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/GetNotes_ByUserIDResponse" message="tns:IDataVaultService_GetNotes_ByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/UpdateNote" message="tns:IDataVaultService_UpdateNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/UpdateNoteResponse" message="tns:IDataVaultService_UpdateNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/UpdateNotes" message="tns:IDataVaultService_UpdateNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/UpdateNotesResponse" message="tns:IDataVaultService_UpdateNotes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/AddPassword" message="tns:IDataVaultService_AddPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/AddPasswordResponse" message="tns:IDataVaultService_AddPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePassword_ByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/DeletePassword_ByID" message="tns:IDataVaultService_DeletePassword_ByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/DeletePassword_ByIDResponse" message="tns:IDataVaultService_DeletePassword_ByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePasswords_ByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/DeletePasswords_ByIDs" message="tns:IDataVaultService_DeletePasswords_ByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/DeletePasswords_ByIDsResponse" message="tns:IDataVaultService_DeletePasswords_ByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/UpdatePassword" message="tns:IDataVaultService_UpdatePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/UpdatePasswordResponse" message="tns:IDataVaultService_UpdatePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswords_ByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/GetPasswords_ByUserID" message="tns:IDataVaultService_GetPasswords_ByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/GetPasswords_ByUserIDResponse" message="tns:IDataVaultService_GetPasswords_ByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword_ByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/GetPassword_ByID" message="tns:IDataVaultService_GetPassword_ByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/GetPassword_ByIDResponse" message="tns:IDataVaultService_GetPassword_ByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswords_ByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/GetPasswords_ByIDs" message="tns:IDataVaultService_GetPasswords_ByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/GetPasswords_ByIDsResponse" message="tns:IDataVaultService_GetPasswords_ByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/AddAccount" message="tns:IDataVaultService_AddAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/AddAccountResponse" message="tns:IDataVaultService_AddAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Account_ViaAuthentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_Account_ViaAuthentication" message="tns:IDataVaultService_Get_Account_ViaAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_Account_ViaAuthenticationResponse" message="tns:IDataVaultService_Get_Account_ViaAuthentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/AddContact" message="tns:IDataVaultService_AddContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/AddContactResponse" message="tns:IDataVaultService_AddContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_ContactByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Delete_ContactByID" message="tns:IDataVaultService_Delete_ContactByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Delete_ContactByIDResponse" message="tns:IDataVaultService_Delete_ContactByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_ContactsByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Delete_ContactsByIDs" message="tns:IDataVaultService_Delete_ContactsByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Delete_ContactsByIDsResponse" message="tns:IDataVaultService_Delete_ContactsByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ContactByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_ContactByID" message="tns:IDataVaultService_Get_ContactByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_ContactByIDResponse" message="tns:IDataVaultService_Get_ContactByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ContactsByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_ContactsByUserID" message="tns:IDataVaultService_Get_ContactsByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_ContactsByUserIDResponse" message="tns:IDataVaultService_Get_ContactsByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ContactsByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_ContactsByIDs" message="tns:IDataVaultService_Get_ContactsByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_ContactsByIDsResponse" message="tns:IDataVaultService_Get_ContactsByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMusic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/AddMusic" message="tns:IDataVaultService_AddMusic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/AddMusicResponse" message="tns:IDataVaultService_AddMusic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_MusicByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_MusicByID" message="tns:IDataVaultService_Get_MusicByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_MusicByIDResponse" message="tns:IDataVaultService_Get_MusicByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_MusicByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_MusicByUserID" message="tns:IDataVaultService_Get_MusicByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_MusicByUserIDResponse" message="tns:IDataVaultService_Get_MusicByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_MusicByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_MusicByIDs" message="tns:IDataVaultService_Get_MusicByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_MusicByIDsResponse" message="tns:IDataVaultService_Get_MusicByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/AddPhoto" message="tns:IDataVaultService_AddPhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/AddPhotoResponse" message="tns:IDataVaultService_AddPhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_PhotoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Delete_PhotoByID" message="tns:IDataVaultService_Delete_PhotoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Delete_PhotoByIDResponse" message="tns:IDataVaultService_Delete_PhotoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_PhotosByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Delete_PhotosByIDs" message="tns:IDataVaultService_Delete_PhotosByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Delete_PhotosByIDsResponse" message="tns:IDataVaultService_Delete_PhotosByIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PhotoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_PhotoByID" message="tns:IDataVaultService_Get_PhotoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_PhotoByIDResponse" message="tns:IDataVaultService_Get_PhotoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PhotoByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_PhotoByUserID" message="tns:IDataVaultService_Get_PhotoByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_PhotoByUserIDResponse" message="tns:IDataVaultService_Get_PhotoByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PhotoByIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataVaultService/Get_PhotoByIDs" message="tns:IDataVaultService_Get_PhotoByIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataVaultService/Get_PhotoByIDsResponse" message="tns:IDataVaultService_Get_PhotoByIDs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataVaultService" type="tns:IDataVaultService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IDataVaultService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsServiceAvailable">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/IsServiceAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/AddNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNote_ByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/DeleteNote_ByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNotes_ByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/DeleteNotes_ByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNote_ByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/GetNote_ByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotes_ByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/GetNotes_ByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotes_ByUserID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/GetNotes_ByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNote">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/UpdateNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotes">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/UpdateNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPassword">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/AddPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePassword_ByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/DeletePassword_ByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePasswords_ByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/DeletePasswords_ByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswords_ByUserID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/GetPasswords_ByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPassword_ByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/GetPassword_ByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPasswords_ByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/GetPasswords_ByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Account_ViaAuthentication">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_Account_ViaAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/AddContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_ContactByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Delete_ContactByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_ContactsByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Delete_ContactsByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ContactByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_ContactByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ContactsByUserID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_ContactsByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ContactsByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_ContactsByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMusic">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/AddMusic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_MusicByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_MusicByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_MusicByUserID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_MusicByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_MusicByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_MusicByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPhoto">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/AddPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_PhotoByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Delete_PhotoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_PhotosByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Delete_PhotosByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PhotoByID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_PhotoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PhotoByUserID">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_PhotoByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PhotoByIDs">
+      <soap:operation soapAction="http://tempuri.org/IDataVaultService/Get_PhotoByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataVaultService_WCF">
+    <wsdl:port name="BasicHttpBinding_IDataVaultService" binding="tns:BasicHttpBinding_IDataVaultService">
+      <soap:address location="https://desktop-5qtoe01/DataVaultService/DataVaultService_WCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,42 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="MiniVault.Site_Mobile" %>
+
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="thumbnail" content="Resources/Thumbnail/thumbnail.png" />
+    <meta name="description" content="Store all you personal information in a highly securetd and scalable vault. Store emails, passwords, notes, documents, pdfs, etc" />
+    <meta name="keywords" content="Documents, NotePad, Emails, PDF, Mini Vault, Vault" />
+    <meta name="author" content="Dan Gerchcovich" />
+
+    <title><%: Page.Title %> </title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+
+    <link rel="stylesheet" href="Content/bootstrap.min.css"/>
+    <link href="Resources/Thumbnail/thumbnail.png" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>Mobile Master Page</h1>
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            </section>
+            <friendlyUrls:ViewSwitcher runat="server" />
+        </div>
+    </form>
+</body>
+</html>
